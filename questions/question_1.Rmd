@@ -1,0 +1,25 @@
+# Consider Designs 
+
+```{problem_description}
+Determine the direction of bias in estimating the ATE for each of the following situations when we randomize at the individual level.  Do we over-estimate, or underestimate? Briefly but clearly explain your reasoning.
+```
+
+## Game night!
+Suppose that you're advertising a board-game or online game to try and increase sales. You decide to individually randomly-assign into treatment and control. After you randomize, you learn that some treatment-group members are friends with control-group members IRL. 
+
+- What is the causal quantity that you would have **liked** to estimate? 
+- What is the causal quantity that you have **in fact** estimated? 
+- Is there any relationship between the two? Do you think that what you have estimated will be higher, lower, or about the same effect as the causal quantity that you would have liked to estimate?
+
+**Answer:** ...
+
+## Bonus time!
+As we're writing this question, end-of-year bonuses are being given out in people's companies. (This is not a concept we your instructors have in the program -- each day with your smiling faces is reward enough -- and who needs money anyways?) 
+
+Suppose that you're interested in knowing whether this is a good idea from the point of view of worker productivity and so you agree to randomly assign bonuses to some people. 
+
+- What is the causal quantity that you would have **liked** to estimate? 
+- What is the causal quantity that you have **in fact** estimated? 
+- Is there any relationship between the two? Do you think that what you have estimated will be higher, lower, or about the same effect as the causal quantity that you would have liked to estimate?
+
+**Answer:** ...

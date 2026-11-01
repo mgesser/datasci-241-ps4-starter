@@ -1,0 +1,98 @@
+# Fun with the placebo
+
+```{problem_description}
+The table below summarizes the data from a political science experiment on voting behavior. Subjects were randomized into three groups: a baseline control group (not contacted by canvassers), a treatment group (canvassers attempted to deliver an encouragement to vote), and a placebo group (canvassers attempted to deliver a message unrelated to voting or politics).
+```
+
+```{r, echo=FALSE}
+summary_table <- data.table(
+  'Assignment' = c('Baseline', 'Treatment', 'Treatment', 'Placebo', 'Placebo'), 
+  'Treated?'   = c('No', 'Yes', 'No', 'Yes', 'No'), 
+  'N'          = c(2463, 512, 1898, 476, 2108), 
+  'Turnout'    = c(.3008, .3890, .3160, .3002, .3145)
+)
+
+kable(summary_table)
+``` 
+
+## Make data
+Construct a data set that would reproduce the table. (Too frequently we receive data that has been summarized up to a level that is not useful for our analysis. Here, we're asking you to "un-summarize" the data to conduct the rest of the analysis for this question.)
+
+```{r construct placebo data, include=TRUE}
+d <- data.table('fill this in')
+```
+
+## Estimate the compliance rate using the treatment group
+Estimate the proportion of compliers by using the data on the treatment group.  Provide a short narrative using inline R code, such as `r inline_reference`.  
+
+```{r treatment group compliance rate, include=TRUE}
+compliance_rate_t <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Estimate the compliance rate using the control group
+C. Estimate the proportion of compliers by using the data on the placebo group.  Provide a short narrative using inline R code.
+
+```{r placebo group compliance rate, include=TRUE}
+compliance_rate_p <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Compare these compliance rates
+Are the two compliance rates statistically significantly different from each other? Provide *a test* -- this means that you cannot simply "look at" or "eyeball" the coefficients and infer some conclusion -- and a description about why you chose that particular test, and why you chose that particular set of data. 
+
+```{r proportions difference, include=TRUE}
+proportions_difference_test <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Evaluate assumptions
+What critical assumption does this comparison of the two groups' compliance rates test? Given what you learn from the test, how do you suggest moving forward with the analysis for this problem? 
+
+**Answer:** ...
+
+## Compliers average treatement effect... of the placebo?
+Estimate the CACE of receiving the placebo. Is the estimate consistent with the assumption that the placebo has no effect on turnout?
+
+```{r cace of placebo, include=TRUE}
+cace_estimate <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Diference in means estimator
+Using a difference in means (i.e. not a linear model), compute the ITT using the appropriate groups' data. Then, divide this ITT by the appropriate compliance rate to produce an estiamte the CACE.  Provide a short narrative using inline R code.    
+
+```{r cace through means, include=TRUE}
+itt        <- 'fill this in'
+cace_means <- 'fill this in'  
+```
+
+**Answer:** ...
+
+## Linear model estimator
+Use two separate linear models to estimate the CACE of receiving the treatment by first estimating the ITT and then dividing by $ITT_{D}$. Use the `coef()` extractor and in line code evaluation to write a descriptive statement about what you learn after your code. 
+
+```{r itt / d, include=TRUE}
+itt_model   <- 'fill this in'
+itt_d_model <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Data subset estimator
+When a design uses a placebo group, one additional way to estiamte the CACE is possible -- subset to include only compliers in the treatment and placebo groups, and then estimate a linear model. Produce that estimate here. Provide a short narrative using inline R code.  
+
+```{r cace subset, include=TRUE} 
+cace_subset_model <- 'fill this in'
+```
+
+**Answer:** ...
+
+## Evaluate estimators
+In large samples (i.e. "in expectation") when the design is carried out correctly, we have the expectation that the results from 7, 8, and 9 should be the same. Are they? If so, does this give you confidence that these methods are working well. If not, what explains why these estimators are producing different estimates? 
+
+**Answer:** ...
